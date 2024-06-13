@@ -11,6 +11,15 @@
   "keywords": [],
   "dependencies": {
     "@sequelize/sqlite3": "^7.0.0-alpha.41",
-    "express": "^4.19.2"
-  }
+    "express": "^4.19.2",
+    "sequelize": "^6.37.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevLopes011/test-onze.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DevLopes011/test-onze/issues"
+  },
+  "homepage": "https://github.com/DevLopes011/test-onze#readme"
 }

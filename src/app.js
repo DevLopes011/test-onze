@@ -11,8 +11,6 @@ class App {
     
     configureMiddleware() {
         const routes = new Routes()
-
-
         this.app.use(bodyParser.urlencoded({ extended: true }))
         this.app.use(express.static('src/view'))
         this.app.use(bodyParser.json())

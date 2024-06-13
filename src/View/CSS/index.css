@@ -1,0 +1,20 @@
+.navbar-light {
+  background-color: aquamarine;
+}
+
+.navbar-brand .brand-text-red {
+  color: red;
+}
+
+.btn-aquamarine {
+  background-color: aquamarine;
+  color: black;
+  border-color: aquamarine;
+  transition: all 0.3s ease;
+}
+
+.btn-aquamarine:hover {
+  background-color: #7fffd4;
+  color: black;
+  border-color: #7fffd4;
+}
