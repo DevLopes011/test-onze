@@ -1,6 +1,6 @@
-const app = require ('./app.js')
+const app = require('./app.js')
 const port = 3000
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`)
 })

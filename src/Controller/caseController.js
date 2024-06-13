@@ -1,4 +1,4 @@
-const CaseService =  require('./Service/caseService.js')
+const CaseService = require('./Service/caseService.js')
 
 class CaseController {
     async create(req, res) {
@@ -12,14 +12,14 @@ class CaseController {
                 caseLink
             } = req.body
 
-            const newCase = await CaseService.create(
+            const newCase = await CaseService.create({
                 datePublicationNews,
                 describeCaseFewWords,
                 contextAdditionalInformation,
                 partySource,
                 caseImportance,
                 caseLink
-            )
+            })
 
             res.status(201).json({ Message: 'Caso registrado com sucesso!', Case: newCase })
         } catch (error) {

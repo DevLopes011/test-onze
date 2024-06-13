@@ -1,6 +1,11 @@
 const DataTypes = require('@sequelize/core')
-const sequelize = require('../Model/db/database.js')
+const { Sequelize } = require('@sequelize/core')
+const { SqliteDialect } = require('@sequelize/sqlite3')
 
+let sequelize = new Sequelize({
+  dialect: SqliteDialect,
+  storage: 'sequelize.sqlite',
+})
 
 const dbCases = sequelize.define('DbCases', {
   datePublicationNews: {
@@ -28,5 +33,18 @@ const dbCases = sequelize.define('DbCases', {
     allowNull: false,
   },
 })
+
+async function synchronizeModel() {
+  try {
+      await sequelize.authenticate()
+      console.log('Connection has been established successfully.')
+
+      await sequelize.sync()
+      console.log('Model synchronized successfully')
+  } catch (error) {
+      console.error('Unable to connect to the database:', error)
+  }
+}
+synchronizeModel()
 
 module.exports = dbCases

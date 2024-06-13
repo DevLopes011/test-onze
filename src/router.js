@@ -14,8 +14,7 @@ class Routes {
         this.router.get('/', (req, res) => {
             res.sendFile(path.join(__dirname, 'View', 'HTML', 'index.html'))
         })
-        
-        this.router.post('/cadForm', CaseController.create)
+        this.router.post('/cadCase', express.json(), CaseController.create)
     }
 }
 
